@@ -78,3 +78,7 @@ label{
 .repos {
   cursor: pointer;
 }
+
+[v-cloak] {
+  display: none;
+}

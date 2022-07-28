@@ -17,14 +17,10 @@ Vue.createApp({
             this.rotateZ  = 0
         },
 
-        copy () {
-            let toBeCopied = `perspective(${this.perspective}px)
-            rotateX(${this.rotateX}deg)
-            rotateY(${this.rotateY}deg)
-            rotateZ(${this.rotateZ}deg)
-            `;
+        async copy () {
+            let toBeCopied = `transform:${this.box.transform}`;
 
-            navigator.clipboard.writeText(toBeCopied);
+            await navigator.clipboard.writeText(toBeCopied);
             alert( "copied to clipboard")
         }
     },
