@@ -5,7 +5,8 @@ Vue.createApp({
             rotateX: 0,
             rotateY: 0,
             rotateZ : 0,
-            cssClass : "repos"
+            cssClass : "repos",
+            css : "color: blue"
         }
     },
 
@@ -19,10 +20,10 @@ Vue.createApp({
 
         async copy () {
             let toBeCopied = `transform:${this.box.transform}`;
-
+            
             await navigator.clipboard.writeText(toBeCopied);
             alert( "copied to clipboard")
-        }
+        },
     },
 
     computed: {
