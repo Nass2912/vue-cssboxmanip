@@ -4,7 +4,8 @@ Vue.createApp({
             perspective: 100,
             rotateX: 0,
             rotateY: 0,
-            rotateZ : 0
+            rotateZ : 0,
+            cssClass : "repos"
         }
     },
 
@@ -24,6 +25,7 @@ Vue.createApp({
             `;
 
             navigator.clipboard.writeText(toBeCopied);
+            alert( "copied to clipboard")
         }
     },
 
